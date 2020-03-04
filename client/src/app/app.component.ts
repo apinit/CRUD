@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'client';
+  
+  constructor(public router: Router){}
+
+  goToAnimal(){
+    this.router.navigate(['/animal']);
+  }
+
+  goToZoo(){
+    this.router.navigate(['/zoo']);
+  }
+
+  //animal
+  //zoo
+  //refer to app-routing.module path: 'xx'
 }
