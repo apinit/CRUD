@@ -1,6 +1,17 @@
-h1 {
+.container {
+    display: block;
+    padding-top: 20px;
+}
+
+.example-card {
+    max-width: 400px;
+    margin: auto;
+}
+
+mat-card-header {
+    flex-direction: column;
+}
+
+h3 {
     text-align: center;
-    text-transform: uppercase;
-    font-size: 30;
-    font-weight: bold;
 }
