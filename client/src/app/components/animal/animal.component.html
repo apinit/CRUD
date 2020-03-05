@@ -4,10 +4,15 @@
             <h3>Animal Form</h3>
         </mat-card-header>
         <mat-card-content>
-
+            <form>
+                <mat-form-field class="field-name" appearance="outline">
+                    <mat-label>Animal Name</mat-label>
+                    <input matInput name="animal-name">
+                </mat-form-field>
+            </form>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="primary">Submit</button>
+            <button mat-raised-button color="primary" class="btn-submit">Submit</button>
         </mat-card-actions>
     </mat-card>
 </div>
