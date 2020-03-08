@@ -24,8 +24,12 @@ export class AnimalComponent implements OnInit {
       this.animal.animalName = this.getField('name').value;
       this.animal.gender = this.getField('gender').value;
 
-      this.animalService.addAnimal(this.animal);
-      this.utils.resetFormGroup(this.form);
+      this.animalService.addAnimal(this.animal).then((res) => {
+        console.log(res);
+        this.utils.resetFormGroup(this.form);
+      }).catch((error) => {
+        console.log(error);
+      });
     }
   }
 

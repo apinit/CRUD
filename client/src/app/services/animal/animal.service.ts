@@ -9,8 +9,7 @@ export class AnimalService {
 
   constructor(public http: HttpClient) { }
 
-  addAnimal(animal: Animal) {
-    console.log("service", animal);
-    // this.http.post(ENDPOINT, animal);
+  addAnimal(animal: Animal): Promise<any> {
+    return this.http.post(ENDPOINT + '/animal/add', animal).toPromise();
   }
 }
