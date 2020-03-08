@@ -4,19 +4,19 @@
             <h3>Animal Form</h3>
         </mat-card-header>
         <mat-card-content>
-            <form>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
                 <mat-form-field class="field-name" appearance="outline">
                     <mat-label>Animal Name</mat-label>
-                    <input matInput name="animal-name">
+                    <input matInput name="animal-name" formControlName="name" required>
                 </mat-form-field>
-                <mat-radio-group aria-label="Select an option" color="primary">
+                <mat-radio-group aria-label="Select an option" color="primary" formControlName="gender">
                     <mat-radio-button value="1">Male</mat-radio-button>
                     <mat-radio-button value="2">Female</mat-radio-button>
                 </mat-radio-group>
             </form>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="primary" class="btn-submit">Submit</button>
+            <button type="submit" mat-raised-button color="primary" class="btn-submit" (click)="onSubmit()" [disabled]="!form.valid">Submit</button>
         </mat-card-actions>
     </mat-card>
 </div>

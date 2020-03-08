@@ -3,5 +3,5 @@ export class Animal {
     animalName: string;
     gender: string;
     creationDate: Date;
-    modified: Date;
+    modifiedDate: Date;
 }
